@@ -23,7 +23,7 @@ DATASET = "DS1"
 # Strings are handled very differently between python2 and python3.
 if sys.hexversion >= 0x03000000:
     FILE = FILE.encode()
-    DATASET.encode()
+    DATASET = DATASET.encode()
 
 DIM0 = 6
 DIM1 = 8

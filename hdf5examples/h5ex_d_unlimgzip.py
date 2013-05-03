@@ -128,8 +128,8 @@ def run():
     del file
 
     # Now simply read back the data and echo to the screen.
-    file = h5py.h5f.open(FILE.encode())
-    dset = h5py.h5d.open(file, DATASET.encode())
+    file = h5py.h5f.open(FILE)
+    dset = h5py.h5d.open(file, DATASET)
 
     # Retrieve dataset creation property list.
     dcpl = dset.get_create_plist()
