@@ -47,4 +47,5 @@ def ovisit(name, info):
     print( fmt % name.decode('utf-8'))
 
 if __name__ == "__main__":
+    # Supply the path to "h5ex_g_visit.h5" here.
     run(sys.argv[1])        
