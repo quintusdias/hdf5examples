@@ -35,6 +35,7 @@ class TestHdf5Examples(unittest.TestCase):
                 elif x == 'h5ex_g_visit':
                     hdf5file = pkg_resources.resource_filename(hdf5examples.__name__,
                                                                "data/h5ex_g_visit.h5")
+                    example.run(hdf5file)
 
                 else:
                     example.run()
