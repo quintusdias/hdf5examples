@@ -17,4 +17,5 @@ from . import h5ex_d_unlimmod
 from . import h5ex_g_create
 from . import h5ex_g_intermediate
 from . import h5ex_g_visit
+from . import h5ex_t_float
 from . import tests

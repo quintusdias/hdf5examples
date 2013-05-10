@@ -41,7 +41,7 @@ def run():
     file = h5py.h5f.create(FILE)
 
     # Create the dataspace.  
-    space = h5py.h5s.create_simple(dims, None)
+    space = h5py.h5s.create_simple(dims)
 
     # Create the dataset creation property list and set the chunk size.
     dcpl = h5py.h5p.create(h5py.h5p.DATASET_CREATE)
