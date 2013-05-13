@@ -19,4 +19,6 @@ from . import h5ex_g_intermediate
 from . import h5ex_g_visit
 from . import h5ex_t_floatatt
 from . import h5ex_t_float
+from . import h5ex_t_intatt
+from . import h5ex_t_int
 from . import tests

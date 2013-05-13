@@ -1,5 +1,5 @@
 """
-This example shows how to read and write float datatypes to an attribute. The
+This example shows how to read and write integer datatypes to an attribute. The
 program first writes floats to an attribute with a dataspace of DIM0xDIM1, then
 closes the file.  Next, it reopens the file, reads back the data, and outputs
 it to the screen.
@@ -15,7 +15,7 @@ import sys
 import numpy as np
 import h5py
 
-FILE = "h5ex_t_floatatt.h5"
+FILE = "h5ex_t_intatt.h5"
 DATASET = "DS1"
 ATTRIBUTE = "A1"
 
@@ -31,10 +31,10 @@ DIMS = (DIM0, DIM1)
 
 def run():
     # Initialize the data.
-    wdata = np.zeros((DIM0, DIM1), dtype=np.float64)
+    wdata = np.zeros((DIM0, DIM1), dtype=np.int64)
     for i in range(DIM0):
         for j in range(DIM1):
-            wdata[i][j] = i / (j + 0.5) + j
+            wdata[i][j] = i * j - j
 
     # Create a new file using the default properties.
     fid = h5py.h5f.create(FILE)
@@ -52,11 +52,10 @@ def run():
     space = h5py.h5s.create_simple(DIMS)
 
     # Create the attribute and write the floating point data to it.
-    # In this example we will save the data as 64 bit little endian
-    # IEEE floating point numbers, regardless of the native type.  The
-    # HDF5 library automatically converts between different floating point
+    # In this example we will save the data as 64 bit big endian integers.
+    # The HDF5 library automatically converts between different floating point
     # types.
-    attr = h5py.h5a.create(dset, ATTRIBUTE, h5py.h5t.IEEE_F64LE, space)
+    attr = h5py.h5a.create(dset, ATTRIBUTE, h5py.h5t.STD_I64BE, space)
     attr.write(wdata)
             
 
@@ -73,7 +72,7 @@ def run():
 
     # Get the dataspace and allocate space for the read buffer.
     space = attr.get_space()
-    rdata = np.zeros((DIM0, DIM1), dtype=np.float64)
+    rdata = np.zeros((DIM0, DIM1), dtype=np.int64)
 
     attr.read(rdata)
 
