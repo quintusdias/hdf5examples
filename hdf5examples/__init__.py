@@ -21,4 +21,5 @@ from . import h5ex_t_floatatt
 from . import h5ex_t_float
 from . import h5ex_t_intatt
 from . import h5ex_t_int
+from . import h5ex_t_string
 from . import tests
