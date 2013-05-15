@@ -23,6 +23,7 @@ ATTRIBUTE = "A1"
 if sys.hexversion >= 0x03000000:
     FILE = FILE.encode()
     DATASET = DATASET.encode()
+    ATTRIBUTE = ATTRIBUTE.encode()
 
 DIM0 = 4
 SDIM = 8
