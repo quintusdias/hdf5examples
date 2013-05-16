@@ -24,4 +24,5 @@ from . import h5ex_t_int
 from . import h5ex_t_string
 from . import h5ex_t_stringatt
 from . import h5ex_t_vlstring
+from . import h5ex_t_vlstringatt
 from . import tests
