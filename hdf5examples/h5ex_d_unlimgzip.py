@@ -8,10 +8,12 @@ to the extended portions of the dataset.  Finally it reopens the
 file again, reads back the data, and outputs it to the screen.
 
 Tested with:
-    HDF5:   1.8.9/1.8.10
-    Python: 2.7.3/3.2.3
-    Numpy:  1.7.1/1.7.1
-    H5PY:   2.1.0/2.1.2
+    Fedora 18:
+        HDF5 1.8.9, Python 2.7.3, Numpy 1.7.1, h5py 2.1.3
+    Fedora 18:
+        HDF5 1.8.9, Python 3.3.0, Numpy 1.7.1, h5py 2.1.3
+    Mac OS X 10.6.8:
+        HDF5 1.8.10, Python 3.2.5, Numpy 1.7.1, h5py 2.1.3
 """
 import sys
 
