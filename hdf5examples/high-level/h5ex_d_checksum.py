@@ -1,6 +1,6 @@
 """
 This example shows how to read and write data to a dataset using
-the Fletcher32 checksum filter. 
+the Fletcher32 checksum filter.
 
 Tested with:
     Fedora 18:
@@ -10,7 +10,6 @@ Tested with:
     Mac OS X 10.6.8:
         HDF5 1.8.10, Python 3.2.5, Numpy 1.7.1, h5py 2.1.3
 """
-import sys
 
 import numpy as np
 import h5py
@@ -19,10 +18,9 @@ FILE = "h5ex_d_checksum.h5"
 DATASET = "DS1"
 
 DIM0 = 32
-DIM1 = 64 
+DIM1 = 64
 CHUNK0 = 4
 CHUNK1 = 8
-chunk = (CHUNK0, CHUNK1)
 
 def run():
 
@@ -53,5 +51,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()        
-   
+    run()
