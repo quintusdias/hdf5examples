@@ -65,6 +65,10 @@ def run():
         dset[DIM0:EDIM0, 0:EDIM1] = wdata[DIM0:EDIM0, 0:EDIM1]
         dset[0:DIM0, DIM1:EDIM1] = wdata[0:DIM0, DIM1:EDIM1]
 
+        # It could also be done with
+        # dset.write_direct(wdata, np.s_[DIM0:EDIM0, 0:EDIM1], np.s_[DIM0:EDIM0, 0:EDIM1])
+        # dset.write_direct(wdata, np.s_[0:DIM0, DIM1:EDIM1], np.s_[0:DIM0, DIM1:EDIM1])
+
     # Now simply read back the data and echo to the screen.
     with h5py.File(FILE, 'r') as f:
         dset = f[DATASET]
