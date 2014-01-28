@@ -1,11 +1,6 @@
 """
 This example shows how to read and write data to a dataset using
-the Fletcher32 checksum filter.  The program first checks if the
-Fletcher32 filter is available, then if it is it writes integers
-to a dataset using Fletcher32, then closes the file.  Next, it
-reopens the file, reads back the data, checks if the filter detected
-an error and outputs the type of filter and the maximum value in
-the dataset to the screen.
+the Fletcher32 checksum filter. 
 
 Tested with:
     Fedora 18:
