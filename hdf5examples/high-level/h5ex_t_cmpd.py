@@ -28,7 +28,7 @@ def run():
                       ("Temperature",   np.float),
                       ("Pressure",      np.float)])
 
-    wdata = np.zeros((4,), dtype=dtype)
+    wdata = np.zeros((DIM0,), dtype=dtype)
     wdata['Serial number'] = (1153, 1184, 1027, 1313)
     wdata['Location'] = ("Exterior (static)", "Intake", "Intake manifold",
                          "Exhaust manifold")
