@@ -1,3 +1,5 @@
+import glob
+import os
 import sys
 if sys.hexversion < 0x03000000:
     from StringIO import StringIO
@@ -22,10 +24,26 @@ class TestHdf5Examples(unittest.TestCase):
         # Restore stdout.
         sys.stdout = self.stdout
 
+    @classmethod
+    def setUpClass(cls):
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        # Delete all the hdf5 files.
+        lst = glob.glob('h5ex_?_*.h5')
+        for h5file in lst:
+            os.unlink(h5file)
+        others = ['copy1.h5', 'copy2.h5', 'cmprss.h5']
+        for other in others:
+            if os.path.exists(other):
+                os.unlink(other)
+
+
     def test_all(self):
         # Just run all the examples.
-        for x in dir(hdf5examples):
-            example = getattr(hdf5examples, x)
+        for x in dir(hdf5examples.low_level):
+            example = getattr(hdf5examples.low_level, x)
             if hasattr(example, 'run'):
                 
                 # Szip not available on my machine.
