@@ -6,14 +6,6 @@ to a dataset using Fletcher32, then closes the file.  Next, it
 reopens the file, reads back the data, checks if the filter detected
 an error and outputs the type of filter and the maximum value in
 the dataset to the screen.
-
-Tested with:
-    Fedora 18:
-        HDF5 1.8.9, Python 2.7.3, Numpy 1.7.1, h5py 2.1.3
-    Fedora 18:
-        HDF5 1.8.9, Python 3.3.0, Numpy 1.7.1, h5py 2.1.3
-    Mac OS X 10.6.8:
-        HDF5 1.8.10, Python 3.2.5, Numpy 1.7.1, h5py 2.1.3
 """
 import sys
 

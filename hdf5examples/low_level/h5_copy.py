@@ -11,14 +11,6 @@ copy1.h5 and writes values to them.  Then it does an H5Scopy from
 the first file to the second, and writes the values to copy2.h5.
 It then closes the files, reopens them, and prints the contents of
 the two datasets.   
-
-Tested with:
-    Fedora 18:
-        HDF5 1.8.9, Python 2.7.3, Numpy 1.7.1, h5py 2.1.3
-    Fedora 18:
-        HDF5 1.8.9, Python 3.3.0, Numpy 1.7.1, h5py 2.1.3
-    Mac OS X 10.6.8:
-        HDF5 1.8.10, Python 3.2.5, Numpy 1.7.1, h5py 2.1.3
 """
 import sys
 

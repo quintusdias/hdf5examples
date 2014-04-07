@@ -1,11 +1,10 @@
 hdf5examples
 ============
 
-Requirements
-------------
-* Python 2.7, 3.2, 3.3
-* h5py
-* pkg_resources (on Fedora, this is provided by **python-setuptools** RPM, while in macports, it's part of the **distribute** port)
+Tested On
+---------
+* Mac OS X 10.9.2: HDF5 1.8.12, Python 2.7.6, Numpy 1.8.0, h5py 2.2.1
+* Linux (CentOS 6.4): HDF5 1.8.9, Python 2.7.6, Numpy 1.8.0, h5py 2.2.1
 
 Tests
 -----

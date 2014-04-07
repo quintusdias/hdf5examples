@@ -1,14 +1,6 @@
 """
 This example shows how to create intermediate groups with a single call to
 h5py.h5g.create.
-
-Tested with:
-    Fedora 18:
-        HDF5 1.8.9, Python 2.7.3, Numpy 1.7.1, h5py 2.1.3
-    Fedora 18:
-        HDF5 1.8.9, Python 3.3.0, Numpy 1.7.1, h5py 2.1.3
-    Mac OS X 10.6.8:
-        HDF5 1.8.10, Python 3.2.5, Numpy 1.7.1, h5py 2.1.3
 """
 import sys
 
