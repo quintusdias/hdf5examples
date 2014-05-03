@@ -55,6 +55,10 @@ class TestHdf5Examples(unittest.TestCase):
                                                                "data/h5ex_g_visit.h5")
                     example.run(hdf5file)
 
+                elif ((x == 'h5ex_t_vlen' or x == 'h5ex_t_vlenatt') and
+                        re.match(r'''1|2\.[012]''', h5py.__version__)):
+                    # arbitrary vlens not supported until 2.3.0
+                    pass
                 else:
                     example.run()
 
