@@ -21,13 +21,14 @@ def run():
 
     # Initialize variable-length data.  wdata[0] is a countdown of length LEN0,
     # wdata[1] is a Fibonacci sequence of length LEN1
-    wdata = [[], []]
-    for j in range(LEN0):
-        wdata[0].append(LEN0 - j)
-
-    wdata[1] = [1, 1]
+    wdata0 = np.arange(LEN0, 0, -1)
+    wdata1 = np.zeros((LEN1,))
+    wdata1[0] = 1
+    wdata1[1] = 1
     for j in range(2, LEN1):
-        wdata[1].append(wdata[1][j - 2] + wdata[1][j - 1])
+        wdata1[j] = wdata1[j - 2] + wdata1[j - 1]
+
+    wdata = [wdata0, wdata1]
 
     dtype = h5py.special_dtype(vlen=np.dtype('int32'))
     with h5py.File(FILE, 'w') as f:
